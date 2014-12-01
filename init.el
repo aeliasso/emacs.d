@@ -34,3 +34,4 @@
 (load-library "org-cfg")
 (load-library "scala-cfg")
 (load-library "vc-cfg")
+(load-library "convenience-functions")
