@@ -1,6 +1,3 @@
-; Visa radnummer
-(global-linum-mode t)
-; TODO: bara linum-mode för kod, inte för fundamental, org eller latex
 ; Bryt rader vid ordgränser
 (global-visual-line-mode t)
 ; Räkna kolumner (rader räknas som standard)
@@ -70,3 +67,18 @@
       (activate-mark))))
 
 (global-set-key "\M-@" 'my-mark-current-word)
+
+; http://whattheemacsd.com/key-bindings.el-01.html
+(global-set-key [remap goto-line] 'goto-line-with-feedback)
+
+(defun goto-line-with-feedback ()
+  "Show line numbers temporarily, while prompting for the line number input"
+  (interactive)
+  (if (and (boundp 'linum-mode)
+           linum-mode)
+      (call-interactively 'goto-line)
+    (unwind-protect
+        (progn
+          (linum-mode 1)
+          (call-interactively 'goto-line))
+      (linum-mode -1))))
