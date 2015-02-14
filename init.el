@@ -6,6 +6,7 @@
  '(ansi-color-names-vector ["#2e3436" "#a40000" "#4e9a06" "#c4a000" "#204a87" "#5c3566" "#729fcf" "#eeeeec"])
  '(create-lockfiles nil)
  '(custom-enabled-themes (quote (deeper-blue)))
+ '(default-frame-alist (quote ((width . 81) (height . 51))))
  '(fill-column 80)
  '(glyphless-char-display-control (quote ((format-control . acronym) (no-font . hex-code))))
  '(inhibit-startup-screen t)
