@@ -11,6 +11,7 @@
  '(inhibit-startup-screen t)
  '(mouse-wheel-progressive-speed nil)
  '(mouse-wheel-scroll-amount (quote (3 ((shift) . 1) ((control)))))
+ '(org-special-ctrl-a/e t)
  '(scroll-conservatively 10)
  '(sentence-end-double-space nil)
  '(tab-width 4)
