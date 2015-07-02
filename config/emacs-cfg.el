@@ -82,3 +82,6 @@
           (linum-mode 1)
           (call-interactively 'goto-line))
       (linum-mode -1))))
+
+(global-set-key [C-tab] (lambda () (interactive)(other-window 1)))
+(global-set-key [C-iso-lefttab] (lambda () (interactive)(other-window 1)))
