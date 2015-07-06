@@ -21,12 +21,17 @@
 ;(autoload 'rw-hunspell "rw-hunspell")
 
 ;; Save backup and auto-save files in a central location
+(defconst backup-dir (expand-file-name
+                      (concat user-emacs-directory "backups")))
+(if (not (file-exists-p backup-dir))
+    (make-directory backup-dir))
 (setq backup-directory-alist
-      `(("." . ,(expand-file-name
-                 (concat user-emacs-directory "backups")))))
+      `(("." . ,backup-dir)))
 ; Directory name => Must have trailing slash
 (defconst auto-save-dir (expand-file-name
                  (concat user-emacs-directory "autosaves/")))
+(if (not (file-exists-p auto-save-dir))
+    (make-directory auto-save-dir))
 (setq auto-save-file-name-transforms
       `((".*" ,auto-save-dir t)))
 
