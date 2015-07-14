@@ -38,10 +38,10 @@
 ; Libraries
 (add-to-list 'load-path "~/.emacs.d/site-lisp/")
 
+(load-library "convenience-functions")
 (load-library "emacs-cfg")
 (load-library "latex-cfg")
 (load-library "lua-cfg")
 (load-library "org-cfg")
 (load-library "scala-cfg")
 (load-library "vc-cfg")
-(load-library "convenience-functions")
