@@ -35,6 +35,7 @@
 (setq auto-save-file-name-transforms
       `((".*" ,auto-save-dir t)))
 
+(add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode))
 (add-to-list 'auto-mode-alist '("\\.mdwn\\'" . markdown-mode))
 
 ; https://stackoverflow.com/questions/6464738/how-can-i-switch-focus-after-buffer-split-in-emacs
