@@ -25,7 +25,6 @@
  '(scroll-conservatively 10)
  '(sentence-end-double-space nil)
  '(show-trailing-whitespace t)
- '(tab-width 4)
  '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

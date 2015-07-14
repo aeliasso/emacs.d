@@ -2,11 +2,6 @@
 (global-visual-line-mode t)
 ; Räkna kolumner (rader räknas som standard)
 (column-number-mode t)
-; Använd mellanslag istället för tabulatortecken
-(setq-default indent-tabs-mode nil)
-; Tabulatorstopp vartannat tecken (standard: 4)
-(setq-default c-basic-offset 4)
-; tab-width = bredden på ett tabulatortecken
 
 (setq-default cursor-type 'bar)
 
