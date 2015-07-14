@@ -35,6 +35,8 @@
 (setq auto-save-file-name-transforms
       `((".*" ,auto-save-dir t)))
 
+(add-to-list 'auto-mode-alist '("\\.mdwn\\'" . markdown-mode))
+
 ; https://stackoverflow.com/questions/6464738/how-can-i-switch-focus-after-buffer-split-in-emacs
 (global-set-key "\C-x2" (lambda () (interactive)(split-window-vertically) (other-window 1)))
 (global-set-key "\C-x3" (lambda () (interactive)(split-window-horizontally) (other-window 1)))
