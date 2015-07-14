@@ -35,12 +35,6 @@
 (setq auto-save-file-name-transforms
       `((".*" ,auto-save-dir t)))
 
-; markdown-mode skickas bara med nyare Emacs-versioner
-(autoload 'markdown-mode "markdown-mode.el"
-   "Major mode for editing Markdown files" t)
-(setq auto-mode-alist
-   (cons '("\.md" . markdown-mode) auto-mode-alist))
-
 ; https://stackoverflow.com/questions/6464738/how-can-i-switch-focus-after-buffer-split-in-emacs
 (global-set-key "\C-x2" (lambda () (interactive)(split-window-vertically) (other-window 1)))
 (global-set-key "\C-x3" (lambda () (interactive)(split-window-horizontally) (other-window 1)))
