@@ -10,12 +10,15 @@
  ;; If there is more than one, they won't work right.
  '(ansi-color-names-vector
    ["#2e3436" "#a40000" "#4e9a06" "#c4a000" "#204a87" "#5c3566" "#729fcf" "#eeeeec"])
+ '(column-number-mode t)
  '(compilation-scroll-output (quote first-error))
  '(create-lockfiles nil)
+ '(cursor-type (quote bar))
  '(custom-enabled-themes (quote (deeper-blue)))
  '(default-frame-alist (quote ((width . 81) (height . 52))))
  '(ecb-options-version "2.40")
  '(fill-column 80)
+ '(global-visual-line-mode t)
  '(glyphless-char-display-control (quote ((format-control . acronym) (no-font . hex-code))))
  '(inhibit-startup-screen t)
  '(mouse-wheel-progressive-speed nil)

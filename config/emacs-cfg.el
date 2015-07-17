@@ -1,12 +1,3 @@
-; Bryt rader vid ordgränser
-(global-visual-line-mode t)
-; Räkna kolumner (rader räknas som standard)
-(column-number-mode t)
-
-(setq-default cursor-type 'bar)
-
-;(set-face-attribute 'default nil :height 120)
-
 ; Workaround för att fixa döda tangenter
 (require 'iso-transl)
 
