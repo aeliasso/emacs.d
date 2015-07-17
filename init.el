@@ -24,6 +24,8 @@
  '(mouse-wheel-progressive-speed nil)
  '(mouse-wheel-scroll-amount (quote (3 ((shift) . 1) ((control)))))
  '(org-special-ctrl-a/e t)
+ '(org-src-fontify-natively t)
+ '(org-support-shift-select t)
  '(revert-without-query (quote (".*")))
  '(scroll-conservatively 10)
  '(sentence-end-double-space nil)
