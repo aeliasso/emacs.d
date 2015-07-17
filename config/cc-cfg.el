@@ -1,7 +1,7 @@
 ;; cc-mode must be explicitly required for the other stuff in this file to work
 (require 'cc-mode)
 ;; https://truongtx.me/2013/03/10/emacs-setting-up-perfect-environment-for-cc-programming/
-(define-key c-mode-base-map (kbd "RET") 'newline-and-indent)
+;;(define-key c-mode-base-map (kbd "RET") 'newline-and-indent)
 
 (require 'autopair)
 (autopair-global-mode 1)
