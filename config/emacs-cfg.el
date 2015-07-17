@@ -21,6 +21,7 @@
 (setq auto-save-file-name-transforms
       `((".*" ,auto-save-dir t)))
 
+(add-to-list 'auto-mode-alist '("\\.zsh" . sh-mode))
 (add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode))
 (add-to-list 'auto-mode-alist '("\\.mdwn\\'" . markdown-mode))
 
