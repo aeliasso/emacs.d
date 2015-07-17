@@ -40,9 +40,9 @@
 
 ;; User local load path
 ; Config
-(add-to-list 'load-path "~/.emacs.d/config/")
+(add-to-list 'load-path (concat user-emacs-directory "config"))
 ; Libraries
-(add-to-list 'load-path "~/.emacs.d/site-lisp/")
+(add-to-list 'load-path (concat user-emacs-directory "site-lisp"))
 
 (defconst config-files
   (directory-files
