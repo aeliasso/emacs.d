@@ -3,9 +3,6 @@
 ;; https://truongtx.me/2013/03/10/emacs-setting-up-perfect-environment-for-cc-programming/
 ;;(define-key c-mode-base-map (kbd "RET") 'newline-and-indent)
 
-(require 'autopair)
-(autopair-global-mode 1)
-(setq autopair-autowrap t)
 
 ;; The MELPA ECB release 20140215.114 is broken.
 ;; http://stackoverflow.com/questions/20847874/installing-ecb-in-emacs-24-in-ubuntu
