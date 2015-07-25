@@ -75,8 +75,5 @@
 (global-set-key [C-tab] (lambda () (interactive)(other-window 1)))
 (global-set-key [C-iso-lefttab] (lambda () (interactive)(other-window 1)))
 
-(autoload 'log4j-mode "log4j-mode" "Major mode for viewing log files." t)
-(add-to-list 'auto-mode-alist '("\\.log\\'" . log4j-mode))
-(add-hook 'log4j-after-filter-hook 'my-log4j-truncate-lines)
-(defun my-log4j-truncate-lines nil
-  (set (make-local-variable 'truncate-lines) t))
+(use-package log4j-mode
+  :ensure t)
