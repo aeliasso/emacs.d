@@ -1,30 +1,33 @@
 ;; cc-mode must be explicitly required for the other stuff in this file to work
 (require 'cc-mode)
 
-;; The MELPA ECB release 20140215.114 is broken.
+;; The MELPA ECB release 20140215.114 is broken in Debian 7 but working in Ubuntu 15.04?
 ;; http://stackoverflow.com/questions/20847874/installing-ecb-in-emacs-24-in-ubuntu
 (add-to-list 'load-path "~/git/ecb")
 ;; https://truongtx.me/2013/03/10/ecb-emacs-code-browser/
-(require 'ecb)
+(use-package ecb
+  :config
+  ;; ;;; activate and deactivate ecb
+  ;; (global-set-key (kbd "C-x C-;") 'ecb-activate)
+  ;; (global-set-key (kbd "C-x C-'") 'ecb-deactivate)
+  ;; ;;; show/hide ecb window
+  ;; (global-set-key (kbd "C-;") 'ecb-show-ecb-windows)
+  ;; (global-set-key (kbd "C-'") 'ecb-hide-ecb-windows)
+  ;; ;;; quick navigation between ecb windows
+  ;; (global-set-key (kbd "C-)") 'ecb-goto-window-edit1)
+  ;; (global-set-key (kbd "C-!") 'ecb-goto-window-directories)
+  ;; (global-set-key (kbd "C-@") 'ecb-goto-window-sources)
+  ;; (global-set-key (kbd "C-#") 'ecb-goto-window-methods)
+  ;; (global-set-key (kbd "C-$") 'ecb-goto-window-compilation)
 
-;; ;;; activate and deactivate ecb
-;; (global-set-key (kbd "C-x C-;") 'ecb-activate)
-;; (global-set-key (kbd "C-x C-'") 'ecb-deactivate)
-;; ;;; show/hide ecb window
-;; (global-set-key (kbd "C-;") 'ecb-show-ecb-windows)
-;; (global-set-key (kbd "C-'") 'ecb-hide-ecb-windows)
-;; ;;; quick navigation between ecb windows
-;; (global-set-key (kbd "C-)") 'ecb-goto-window-edit1)
-;; (global-set-key (kbd "C-!") 'ecb-goto-window-directories)
-;; (global-set-key (kbd "C-@") 'ecb-goto-window-sources)
-;; (global-set-key (kbd "C-#") 'ecb-goto-window-methods)
-;; (global-set-key (kbd "C-$") 'ecb-goto-window-compilation)
+  ;; eventuellt ersätt ecb-deactivate, ecb-show-ecb-windows och
+  ;; ecb-hide-ecb-windows med egna funktioner
 
-;; eventuellt ersätt ecb-deactivate, ecb-show-ecb-windows och
-;; ecb-hide-ecb-windows med egna funktioner
+  (setq ecb-tip-of-the-day nil)
+  ;;(setq ecb-layout-name "left8") ; default, bra
 
-(setq ecb-tip-of-the-day nil)
-;;(setq ecb-layout-name "left8") ; default, bra
+  (setq ecb-compile-window-height 12)
+  :ensure t)
 
 ;; https://truongtx.me/2013/04/12/emacs-setting-up-perfect-cc-programming-environment/#jump-to-definition--jump-to-implementation
 ;; https://github.com/leoliu/ggtags
@@ -33,24 +36,30 @@
             (when (derived-mode-p 'c-mode 'c++-mode 'java-mode)
               (ggtags-mode 1))))
 
-(setq ecb-compile-window-height 12)
-
 ;; https://truongtx.me/2013/01/06/config-yasnippet-and-autocomplete-on-emacs/
 ;;; yasnippet
 ;;; should be loaded before auto complete so that they can work together
-(require 'yasnippet)
-(yas-global-mode 1)
+(use-package yasnippet
+  :init
+  (defconst snippet-dir (concat user-emacs-directory "snippets"))
+  (if (not (file-exists-p snippet-dir))
+      (make-directory snippet-dir))
+  :config
+  (yas-global-mode 1)
+  :ensure t)
 
 ;;; auto complete mod
 ;;; should be loaded after yasnippet so that they can work together
-(require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
-(ac-config-default)
-;;; set the trigger key so that it can work together with yasnippet on tab key,
-;;; if the word exists in yasnippet, pressing tab will cause yasnippet to
-;;; activate, otherwise, auto-complete will
-(ac-set-trigger-key "TAB")
-(ac-set-trigger-key "<tab>")
+(use-package auto-complete
+  :config
+  (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
+  (ac-config-default)
+  ;; set the trigger key so that it can work together with yasnippet on tab key,
+  ;; if the word exists in yasnippet, pressing tab will cause yasnippet to
+  ;; activate, otherwise, auto-complete will
+  (ac-set-trigger-key "TAB")
+  (ac-set-trigger-key "<tab>")
+  :ensure t)
 
 ;; From Linux Documentation/CodingStyle
 (defun c-lineup-arglist-tabs-only (ignored)
