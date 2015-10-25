@@ -81,12 +81,7 @@
                          c-lineup-gcc-asm-reg
                          c-lineup-arglist-tabs-only))))))
 
-;; (add-hook 'c-mode-hook
-;;           (lambda ()
-;;             (let ((filename (buffer-file-name)))
-;;               ;; Enable kernel mode for the appropriate files
-;;               (when (and filename
-;;                          (string-match (expand-file-name "~/src/linux-trees")
-;;                                        filename))
-;;                 (setq indent-tabs-mode t)
-;;                 (c-set-style "linux-tabs-only")))))
+(add-hook 'c-mode-hook
+          (lambda ()
+	    (setq indent-tabs-mode t)
+	    (c-set-style "linux-tabs-only")))
