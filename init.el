@@ -20,6 +20,7 @@
  '(default-frame-alist (quote ((width . 81) (height . 52))))
  '(ecb-options-version "2.40")
  '(fill-column 80)
+ '(git-commit-summary-max-length 60)
  '(global-visual-line-mode t)
  '(glyphless-char-display-control (quote ((format-control . acronym) (no-font . hex-code))))
  '(inhibit-startup-screen t)
