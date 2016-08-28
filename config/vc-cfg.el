@@ -1,5 +1,4 @@
 (use-package magit
-  :ensure t)
 
 ;; Save files under version control automatically
 ;(require 'real-auto-save)

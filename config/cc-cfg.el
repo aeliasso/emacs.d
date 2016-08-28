@@ -26,8 +26,7 @@
   (setq ecb-tip-of-the-day nil)
   ;;(setq ecb-layout-name "left8") ; default, bra
 
-  (setq ecb-compile-window-height 12)
-  :ensure t)
+  (setq ecb-compile-window-height 12))
 
 ;; https://truongtx.me/2013/04/12/emacs-setting-up-perfect-cc-programming-environment/#jump-to-definition--jump-to-implementation
 ;; https://github.com/leoliu/ggtags
@@ -45,8 +44,7 @@
   (if (not (file-exists-p snippet-dir))
       (make-directory snippet-dir))
   :config
-  (yas-global-mode 1)
-  :ensure t)
+  (yas-global-mode 1))
 
 ;;; auto complete mod
 ;;; should be loaded after yasnippet so that they can work together
@@ -58,8 +56,7 @@
   ;; if the word exists in yasnippet, pressing tab will cause yasnippet to
   ;; activate, otherwise, auto-complete will
   (ac-set-trigger-key "TAB")
-  (ac-set-trigger-key "<tab>")
-  :ensure t)
+  (ac-set-trigger-key "<tab>"))
 
 ;; From Linux Documentation/CodingStyle
 (defun c-lineup-arglist-tabs-only (ignored)

@@ -26,8 +26,7 @@
 (use-package markdown-mode
   :config
   (add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode))
-  (add-to-list 'auto-mode-alist '("\\.mdwn\\'" . markdown-mode))
-  :ensure t)
+  (add-to-list 'auto-mode-alist '("\\.mdwn\\'" . markdown-mode)))
 
 ; https://stackoverflow.com/questions/6464738/how-can-i-switch-focus-after-buffer-split-in-emacs
 (global-set-key "\C-x2" (lambda () (interactive)(split-window-vertically) (other-window 1)))
@@ -79,5 +78,4 @@
 (global-set-key [C-tab] (lambda () (interactive)(other-window 1)))
 (global-set-key [C-iso-lefttab] (lambda () (interactive)(other-window 1)))
 
-(use-package log4j-mode
-  :ensure t)
+(use-package log4j-mode)

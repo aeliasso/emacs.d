@@ -1,2 +1,1 @@
-(use-package haskell-mode
-  :ensure t)
+(use-package haskell-mode)
