@@ -1,4 +1,4 @@
-(use-package magit
+;(use-package magit)
 
 ;; Save files under version control automatically
 ;(require 'real-auto-save)
