@@ -24,9 +24,8 @@
 (add-to-list 'auto-mode-alist '("\\.zsh" . sh-mode))
 
 (use-package markdown-mode
-  :config
-  (add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode))
-  (add-to-list 'auto-mode-alist '("\\.mdwn\\'" . markdown-mode)))
+  :mode (("\\.markdown\\'" . gfm-mode)
+         ("\\.md\\(wn\\)?\\'" . gfm-mode)))
 
 ; https://stackoverflow.com/questions/6464738/how-can-i-switch-focus-after-buffer-split-in-emacs
 (global-set-key "\C-x2" (lambda () (interactive)(split-window-vertically) (other-window 1)))
@@ -60,22 +59,25 @@
 
 (global-set-key "\M-@" 'my-mark-current-word)
 
-; http://whattheemacsd.com/key-bindings.el-01.html
-(global-set-key [remap goto-line] 'goto-line-with-feedback)
+;; Move between windows using M-<arrow keys>
+(windmove-default-keybindings 'meta)
 
-(defun goto-line-with-feedback ()
-  "Show line numbers temporarily, while prompting for the line number input"
-  (interactive)
-  (if (and (boundp 'linum-mode)
-           linum-mode)
-      (call-interactively 'goto-line)
-    (unwind-protect
-        (progn
-          (linum-mode 1)
-          (call-interactively 'goto-line))
-      (linum-mode -1))))
+;; Obsoleted by windmove
+;; (global-set-key [C-tab] (lambda () (interactive)(other-window 1)))
+;; (global-set-key [C-iso-lefttab] (lambda () (interactive)(other-window 1)))
 
-(global-set-key [C-tab] (lambda () (interactive)(other-window 1)))
-(global-set-key [C-iso-lefttab] (lambda () (interactive)(other-window 1)))
+(when (version<= "26.0.50" emacs-version )
+  ;; New in emacs26, replaces linum-mode
+  (global-display-line-numbers-mode))
 
-(use-package log4j-mode)
+;; Highlight matching parenthesis
+(show-paren-mode)
+
+;; http://trey-jackson.blogspot.com/2010/04/emacs-tip-36-abort-minibuffer-when.html
+(defun stop-using-minibuffer ()
+  "kill the minibuffer"
+  (when (and (>= (recursion-depth) 1) (active-minibuffer-window))
+    (abort-recursive-edit)))
+
+;; Kill the minibuffer when the mouse is clicked
+(add-hook 'mouse-leave-buffer-hook 'stop-using-minibuffer)
