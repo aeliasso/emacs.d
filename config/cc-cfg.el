@@ -29,3 +29,15 @@
           (lambda ()
 	    (setq indent-tabs-mode t)
 	    (c-set-style "linux-tabs-only")))
+
+(add-hook 'c-mode-hook
+	  (lambda ()
+	    (c-add-style
+	     "axis"
+	     '("k&r" (c-basic-offset . 2)))))
+
+(add-hook 'c-mode-hook
+	  (lambda ()
+	    (c-add-style
+	     "tom"
+	     '("k&r" (c-basic-offset . 3)))))
