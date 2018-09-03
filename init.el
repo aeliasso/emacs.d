@@ -53,6 +53,7 @@
  '(revert-without-query (quote (".*")))
  '(scroll-conservatively 10)
  '(sentence-end-double-space nil)
+ '(sh-basic-offset 8)
  '(show-trailing-whitespace t)
  '(tool-bar-mode nil))
 (custom-set-faces
