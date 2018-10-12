@@ -85,3 +85,7 @@
 ;; Redefine from list-buffers. buffer-menu opens the buffer menu in the
 ;; current buffer, instead of the other buffer like list-buffer does.
 (global-set-key "\C-x\C-b" 'buffer-menu)
+
+;; https://github.com/syl20bnr/spacemacs/blob/develop/doc/FAQ.org#include-underscores-in-word-motions
+;; For all programming modes
+(add-hook 'prog-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
