@@ -25,6 +25,7 @@
  '(ggtags-oversize-limit 209715200)
  '(ggtags-sort-by-nearness t)
  '(git-commit-summary-max-length 60)
+ '(global-hl-line-mode t)
  '(global-visual-line-mode t)
  '(glyphless-char-display-control (quote ((format-control . acronym) (no-font . hex-code))))
  '(help-window-select t)
