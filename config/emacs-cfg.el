@@ -89,3 +89,14 @@
 ;; https://github.com/syl20bnr/spacemacs/blob/develop/doc/FAQ.org#include-underscores-in-word-motions
 ;; For all programming modes
 (add-hook 'prog-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
+
+;; https://stackoverflow.com/questions/12289903/how-do-i-go-to-a-local-variables-definition-with-emacs-and-gnu-global
+;; + xref-push-marker-stack to be able to return using M-,
+(defun bhj-isearch-from-bod (&optional col-indent)
+  (interactive "p")
+  (xref-push-marker-stack)
+  (let ((word (current-word)))
+    (beginning-of-defun)
+    (setq regexp-search-ring (cons (concat "\\b" word "\\b") regexp-search-ring))
+    (search-forward-regexp (concat "\\b" word "\\b"))))
+(global-set-key "\M-_" 'bhj-isearch-from-bod)
