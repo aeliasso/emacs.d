@@ -20,24 +20,37 @@
             ;; Add kernel style
             (c-add-style
              "linux-tabs-only"
-             '("linux" (c-offsets-alist
-                        (arglist-cont-nonempty
-                         c-lineup-gcc-asm-reg
-                         c-lineup-arglist-tabs-only))))))
+             '("linux"
+	       (c-offsets-alist
+                (arglist-cont-nonempty
+                 c-lineup-gcc-asm-reg
+                 c-lineup-arglist-tabs-only))
+	       (indent-tabs-mode . t)))))
+
+(add-hook 'c-mode-common-hook
+	  (lambda ()
+	    (c-add-style
+	     "k&r-spaces-only"
+	     '("k&r"
+	       (indent-tabs-mode . nil)))))
 
 (add-hook 'c-mode-hook
           (lambda ()
-	    (setq indent-tabs-mode t)
-	    (c-set-style "linux-tabs-only")))
+	    (if (and buffer-file-name
+		     (string-match "linux" buffer-file-name))
+		(c-set-style "linux-tabs-only")
+	      (c-set-style "k&r-spaces-only"))))
 
 (add-hook 'c-mode-hook
 	  (lambda ()
 	    (c-add-style
 	     "axis"
-	     '("k&r" (c-basic-offset . 2)))))
+	     '("k&r-spaces-only"
+	       (c-basic-offset . 2)))))
 
 (add-hook 'c-mode-hook
 	  (lambda ()
 	    (c-add-style
 	     "tom"
-	     '("k&r" (c-basic-offset . 3)))))
+	     '("k&r-spaces-only"
+	       (c-basic-offset . 3)))))
