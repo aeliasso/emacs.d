@@ -29,7 +29,6 @@
  '(global-visual-line-mode t)
  '(glyphless-char-display-control (quote ((format-control . acronym) (no-font . hex-code))))
  '(help-window-select t)
- '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(mouse-wheel-progressive-speed nil)
  '(mouse-wheel-scroll-amount (quote (3 ((shift) . 1) ((control)))))
