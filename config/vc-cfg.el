@@ -1,6 +1,5 @@
 (use-package magit
-  :commands (magit-status magit-define-popup-action)
-  :bind (("<menu>" . magit-status)))
+  :commands (magit-status magit-define-popup-action))
 
 (defalias 'magit-grep 'vc-git-grep)
 

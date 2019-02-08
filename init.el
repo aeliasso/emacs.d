@@ -83,3 +83,19 @@
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 (put 'upcase-region 'disabled nil)
 
+;; on Linux, the menu/apps key syntax is <menu>
+;; on Windows, the menu/apps key syntax is <apps>
+;; make the syntax equal
+(define-key key-translation-map (kbd "<apps>") (kbd "<menu>"))
+
+(progn
+  ;; define set of key sequences
+  (define-prefix-command 'my-leader-key-map)
+
+  (define-key my-leader-key-map (kbd "RET") 'execute-extended-command)
+  (define-key my-leader-key-map (kbd "<menu>") 'exchange-point-and-mark)
+
+  (define-key my-leader-key-map (kbd "g") 'magit-status))
+
+;; make the menu key as leader key
+(global-set-key (kbd "<menu>") 'my-leader-key-map)
