@@ -81,3 +81,5 @@
 
 ;; Always start maximized
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
+(put 'upcase-region 'disabled nil)
+
