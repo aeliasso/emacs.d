@@ -32,7 +32,8 @@
 	    (c-add-style
 	     "k&r-spaces-only"
 	     '("k&r"
-	       (indent-tabs-mode . nil)))))
+	       (indent-tabs-mode . nil)
+               (c-basic-offset . 4)))))
 
 (add-hook 'c-mode-hook
           (lambda ()
