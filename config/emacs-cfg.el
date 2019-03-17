@@ -100,3 +100,7 @@
     (setq regexp-search-ring (cons (concat "\\b" word "\\b") regexp-search-ring))
     (search-forward-regexp (concat "\\b" word "\\b"))))
 (global-set-key "\M-_" 'bhj-isearch-from-bod)
+
+(add-hook 'markdown-mode-hook
+	  (lambda ()
+	    (setq indent-tabs-mode nil)))
