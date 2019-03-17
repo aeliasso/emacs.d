@@ -103,4 +103,6 @@
 
 (add-hook 'markdown-mode-hook
 	  (lambda ()
-	    (setq indent-tabs-mode nil)))
+	    (setq indent-tabs-mode nil)
+	    (local-unset-key (kbd "M-<left>"))
+	    (local-unset-key (kbd "M-<right>"))))
