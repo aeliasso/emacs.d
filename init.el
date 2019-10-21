@@ -30,6 +30,7 @@
  '(glyphless-char-display-control (quote ((format-control . acronym) (no-font . hex-code))))
  '(help-window-select t)
  '(inhibit-startup-screen t)
+ '(menu-bar-mode nil)
  '(meson-indent-basic 4)
  '(mouse-wheel-progressive-speed nil)
  '(mouse-wheel-scroll-amount (quote (3 ((shift) . 1) ((control)))))
