@@ -29,6 +29,7 @@
  '(glyphless-char-display-control (quote ((format-control . acronym) (no-font . hex-code))))
  '(help-window-select t)
  '(inhibit-startup-screen t)
+ '(isearch-allow-scroll t)
  '(markdown-indent-function (quote insert-tab))
  '(menu-bar-mode nil)
  '(meson-indent-basic 4)
