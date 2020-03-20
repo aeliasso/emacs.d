@@ -102,3 +102,5 @@
 
 ;; make the menu key as leader key
 (global-set-key (kbd "<menu>") 'my-leader-key-map)
+
+(require 'kconfig-mode)
