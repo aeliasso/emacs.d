@@ -20,6 +20,7 @@
  '(cursor-type (quote bar))
  '(custom-enabled-themes (quote (deeper-blue)))
  '(default-frame-alist (quote ((width . 81) (height . 52))))
+ '(dired-auto-revert-buffer t)
  '(ecb-options-version "2.40")
  '(fill-column 72)
  '(ggtags-oversize-limit 209715200)
