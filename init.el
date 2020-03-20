@@ -104,3 +104,5 @@
 (global-set-key (kbd "<menu>") 'my-leader-key-map)
 
 (require 'kconfig-mode)
+
+(put 'downcase-region 'disabled nil)
