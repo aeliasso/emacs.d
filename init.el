@@ -12,13 +12,11 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(ansi-color-names-vector
-   ["#2e3436" "#a40000" "#4e9a06" "#c4a000" "#204a87" "#5c3566" "#729fcf" "#eeeeec"])
  '(column-number-mode t)
  '(compilation-scroll-output (quote first-error))
  '(create-lockfiles nil)
  '(cursor-type (quote bar))
- '(custom-enabled-themes (quote (deeper-blue)))
+ '(custom-enabled-themes (quote (tango-dark)))
  '(default-frame-alist (quote ((width . 81) (height . 52))))
  '(dired-auto-revert-buffer t)
  '(ecb-options-version "2.40")
