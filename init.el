@@ -16,7 +16,7 @@
  '(compilation-scroll-output (quote first-error))
  '(create-lockfiles nil)
  '(cursor-type (quote bar))
- '(custom-enabled-themes (quote (tango-dark)))
+ '(custom-enabled-themes (quote (deeper-blue)))
  '(default-frame-alist (quote ((width . 81) (height . 52))))
  '(dired-auto-revert-buffer t)
  '(ecb-options-version "2.40")
