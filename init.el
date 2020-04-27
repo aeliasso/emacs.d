@@ -101,6 +101,6 @@
 ;; make the menu key as leader key
 (global-set-key (kbd "<menu>") 'my-leader-key-map)
 
-(require 'kconfig-mode)
+(require 'kconfig-mode nil :noerror)
 
 (put 'downcase-region 'disabled nil)
