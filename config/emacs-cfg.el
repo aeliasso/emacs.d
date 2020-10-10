@@ -70,6 +70,15 @@
   ;; New in emacs26, replaces linum-mode
   (global-display-line-numbers-mode))
 
+;; Don't want it in DocView though!
+(add-hook 'doc-view-mode-hook 'my-inhibit-global-display-line-numbers-mode)
+
+(defun my-inhibit-global-display-line-numbers-mode ()
+  "Counter-act `global-display-line-numbers-mode'."
+  (add-hook 'after-change-major-mode-hook
+            (lambda () (display-line-numbers-mode 0))
+            :append :local))
+
 ;; Highlight matching parenthesis
 (show-paren-mode)
 
