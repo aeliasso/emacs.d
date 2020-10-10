@@ -19,6 +19,7 @@
  '(custom-enabled-themes (quote (deeper-blue)))
  '(default-frame-alist (quote ((width . 81) (height . 52))))
  '(dired-auto-revert-buffer t)
+ '(doc-view-scale-internally nil)
  '(ecb-options-version "2.40")
  '(extended-command-suggest-shorter nil)
  '(fill-column 72)
