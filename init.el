@@ -59,6 +59,7 @@
    (quote
     (groovy-mode rust-mode kconfig-mode dts-mode meson-mode bitbake-modes ggtags magit use-package markdown-mode meson-mode)))
  '(revert-without-query (quote (".*")))
+ '(revert-without-query '(".*"))
  '(scroll-conservatively 10)
  '(sentence-end-double-space nil)
  '(sh-basic-offset 8)
