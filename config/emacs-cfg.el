@@ -62,10 +62,6 @@
 ;; Move between windows using M-<arrow keys>
 (windmove-default-keybindings 'meta)
 
-;; Obsoleted by windmove
-;; (global-set-key [C-tab] (lambda () (interactive)(other-window 1)))
-;; (global-set-key [C-iso-lefttab] (lambda () (interactive)(other-window 1)))
-
 ;; Highlight matching parenthesis
 (show-paren-mode)
 
