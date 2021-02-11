@@ -19,6 +19,7 @@
  '(custom-enabled-themes (quote (deeper-blue)))
  '(default-frame-alist (quote ((width . 81) (height . 52))))
  '(dired-auto-revert-buffer t)
+ '(dired-mode-hook '(hl-line-mode))
  '(doc-view-scale-internally nil)
  '(ecb-options-version "2.40")
  '(extended-command-suggest-shorter nil)
@@ -27,7 +28,6 @@
  '(ggtags-sort-by-nearness t)
  '(git-commit-summary-max-length 60)
  '(global-auto-revert-mode t)
- '(global-hl-line-mode t)
  '(global-visual-line-mode t)
  '(glyphless-char-display-control (quote ((format-control . acronym) (no-font . hex-code))))
  '(help-window-select t)
@@ -59,6 +59,7 @@
    (quote
     (groovy-mode rust-mode kconfig-mode dts-mode meson-mode bitbake-modes ggtags magit use-package markdown-mode meson-mode)))
  '(revert-without-query (quote (".*")))
+ '(prog-mode-hook '(hl-line-mode))
  '(revert-without-query '(".*"))
  '(scroll-conservatively 10)
  '(sentence-end-double-space nil)
