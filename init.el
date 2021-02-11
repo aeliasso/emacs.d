@@ -55,7 +55,7 @@
      ("onpa" . "https://olanilsson.bitbucket.io/packages/")))
  '(package-selected-packages
    '(groovy-mode vterm rust-mode kconfig-mode dts-mode meson-mode bitbake-modes ggtags magit use-package markdown-mode meson-mode))
- '(prog-mode-hook '(hl-line-mode))
+ '(prog-mode-hook '(hl-line-mode display-line-numbers-mode))
  '(revert-without-query '(".*"))
  '(scroll-conservatively 10)
  '(sentence-end-double-space nil)
