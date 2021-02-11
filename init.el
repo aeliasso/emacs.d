@@ -60,6 +60,7 @@
  '(scroll-conservatively 10)
  '(sentence-end-double-space nil)
  '(sh-basic-offset 8)
+ '(text-mode-hook '(hl-line-mode))
  '(tool-bar-mode nil)
  '(which-function-mode t))
 (custom-set-faces
@@ -107,3 +108,5 @@
 (require 'kconfig-mode nil :noerror)
 
 (put 'downcase-region 'disabled nil)
+
+(add-hook 'conf-mode-hook 'hl-line-mode)
