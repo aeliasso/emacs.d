@@ -63,7 +63,8 @@
  '(scroll-conservatively 10)
  '(sentence-end-double-space nil)
  '(sh-basic-offset 8)
- '(tool-bar-mode nil))
+ '(tool-bar-mode nil)
+ '(which-function-mode t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
