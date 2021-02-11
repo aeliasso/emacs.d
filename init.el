@@ -54,7 +54,7 @@
      ("melpa-stable" . "http://stable.melpa.org/packages/")
      ("onpa" . "https://olanilsson.bitbucket.io/packages/")))
  '(package-selected-packages
-   '(groovy-mode rust-mode kconfig-mode dts-mode meson-mode bitbake-modes ggtags magit use-package markdown-mode meson-mode))
+   '(groovy-mode vterm rust-mode kconfig-mode dts-mode meson-mode bitbake-modes ggtags magit use-package markdown-mode meson-mode))
  '(prog-mode-hook '(hl-line-mode))
  '(revert-without-query '(".*"))
  '(scroll-conservatively 10)
