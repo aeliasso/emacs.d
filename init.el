@@ -117,3 +117,10 @@
 (with-eval-after-load 'vterm
   (define-key vterm-mode-map [M-left] nil)
   (define-key vterm-mode-map [M-right] nil))
+
+;; https://superuser.com/questions/319545/changing-the-default-emacs-terminal-escape-character
+(defun term-use-sensible-escape-char (&rest ignored)
+  (term-set-escape-char 24))
+(advice-add 'term :after #'term-use-sensible-escape-char)
+(advice-add 'serial-term :after #'term-use-sensible-escape-char)
+(advice-add 'ansi-term :after #'term-use-sensible-escape-char)
