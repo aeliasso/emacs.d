@@ -111,3 +111,9 @@
 (put 'downcase-region 'disabled nil)
 
 (add-hook 'conf-mode-hook 'hl-line-mode)
+
+;; Unregister M-left and M-right from vterm's mode map so that they can
+;; still be used by windmove.
+(with-eval-after-load 'vterm
+  (define-key vterm-mode-map [M-left] nil)
+  (define-key vterm-mode-map [M-right] nil))
