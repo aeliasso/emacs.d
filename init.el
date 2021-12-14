@@ -82,9 +82,6 @@
    (concat user-emacs-directory "config") nil "\.el$"))
 (dolist (cfg config-files) (load-library cfg))
 
-;; Emacs Client
-(server-start)
-
 ;; Always start maximized
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 (put 'upcase-region 'disabled nil)
