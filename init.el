@@ -121,3 +121,11 @@
 (advice-add 'term :after #'term-use-sensible-escape-char)
 (advice-add 'serial-term :after #'term-use-sensible-escape-char)
 (advice-add 'ansi-term :after #'term-use-sensible-escape-char)
+
+(when (require 'org-tree-slide nil t)
+  (global-set-key (kbd "<f8>") 'org-tree-slide-mode)
+  (global-set-key (kbd "S-<f8>") 'org-tree-slide-skip-done-toggle))
+(with-eval-after-load "org-tree-slide"
+  (define-key org-tree-slide-mode-map (kbd "<f9>") 'org-tree-slide-move-previous-tree)
+  (define-key org-tree-slide-mode-map (kbd "<f10>") 'org-tree-slide-move-next-tree)
+  )
