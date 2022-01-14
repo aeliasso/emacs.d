@@ -1,5 +1,11 @@
 (use-package magit
-  :commands (magit-status magit-define-popup-action))
+  :commands (magit-status magit-define-popup-action)
+  :config
+  ;; cargo-culted from https://github.com/magit/magit/issues/3717#issuecomment-734798341
+  (transient-append-suffix 'magit-push "-n"
+    '(1 "-W" "Gerrit mark WiP" "--push-option=wip"))
+  (transient-append-suffix 'magit-push "-W"
+    '(1 "=t" "Gerrit set topic" "--push-option=topic=")))
 
 (defalias 'magit-grep 'vc-git-grep)
 
