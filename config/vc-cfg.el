@@ -11,3 +11,5 @@
 
 ;; Make the links in Gerrit's responses clickable
 (add-hook 'magit-process-mode-hook 'goto-address-mode)
+
+(add-hook 'git-commit-mode-hook (lambda () (setq fill-column 72)))
