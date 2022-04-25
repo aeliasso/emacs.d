@@ -57,6 +57,7 @@
    '(yaml-mode lua-mode org-tree-slide unfill graphviz-dot-mode dockerfile-mode groovy-mode vterm rust-mode kconfig-mode dts-mode meson-mode bitbake-modes ggtags magit use-package markdown-mode meson-mode))
  '(prog-mode-hook '(hl-line-mode display-line-numbers-mode))
  '(revert-without-query '(".*"))
+ '(ring-bell-function 'ignore)
  '(save-interprogram-paste-before-kill t)
  '(scroll-conservatively 10)
  '(sentence-end-double-space nil)
