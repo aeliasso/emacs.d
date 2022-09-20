@@ -33,6 +33,7 @@
  '(help-window-select t)
  '(inhibit-startup-screen t)
  '(isearch-allow-scroll t)
+ '(kill-do-not-save-duplicates t)
  '(magit-auto-revert-mode nil)
  '(markdown-indent-function 'insert-tab)
  '(menu-bar-mode nil)
