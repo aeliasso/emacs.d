@@ -40,6 +40,7 @@
 	    (if (and buffer-file-name
 		     (or (string-match "linux" buffer-file-name)
 			 (string-match "modartpec" buffer-file-name)
+		         (string-match "optee[-_]os" buffer-file-name)
 			 (string-match "power-test-vectors-artpec-8" buffer-file-name)))
 		(c-set-style "linux-tabs-only")
 	      (c-set-style "k&r-spaces-only"))))
