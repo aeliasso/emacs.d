@@ -60,6 +60,7 @@
  '(revert-without-query '(".*"))
  '(ring-bell-function 'ignore)
  '(save-interprogram-paste-before-kill t)
+ '(scala-indent:step 4)
  '(scroll-conservatively 10)
  '(sentence-end-double-space nil)
  '(sh-basic-offset 8)
