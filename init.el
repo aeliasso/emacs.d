@@ -30,6 +30,7 @@
  '(global-auto-revert-mode t)
  '(global-visual-line-mode t)
  '(glyphless-char-display-control '((format-control . acronym) (no-font . hex-code)))
+ '(grep-files-aliases '(("everything" . "*")))
  '(help-window-select t)
  '(inhibit-startup-screen t)
  '(isearch-allow-scroll t)
