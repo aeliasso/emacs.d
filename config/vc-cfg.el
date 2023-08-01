@@ -3,8 +3,8 @@
   :config
   ;; cargo-culted from https://github.com/magit/magit/issues/3717#issuecomment-734798341
   (transient-append-suffix 'magit-push "-n"
-    '(1 "-W" "Gerrit mark WiP" "--push-option=wip"))
-  (transient-append-suffix 'magit-push "-W"
+    '(1 "-w" "Gerrit mark work in progress" "--push-option=wip"))
+  (transient-append-suffix 'magit-push "-w"
     '(1 "=t" "Gerrit set topic" "--push-option=topic=")))
 
 (defalias 'magit-grep 'vc-git-grep)
