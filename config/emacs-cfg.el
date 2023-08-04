@@ -74,9 +74,7 @@
 ;; Kill the minibuffer when the mouse is clicked
 (add-hook 'mouse-leave-buffer-hook 'stop-using-minibuffer)
 
-;; Redefine from list-buffers. buffer-menu opens the buffer menu in the
-;; current buffer, instead of the other buffer like list-buffer does.
-(global-set-key "\C-x\C-b" 'buffer-menu)
+(global-set-key (kbd "C-x C-b") 'ibuffer)
 
 ;; https://github.com/syl20bnr/spacemacs/blob/develop/doc/FAQ.org#include-underscores-in-word-motions
 ;; For all programming modes
