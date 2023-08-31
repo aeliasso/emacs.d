@@ -23,6 +23,7 @@
  '(doc-view-scale-internally nil)
  '(ecb-options-version "2.40")
  '(extended-command-suggest-shorter nil)
+ '(fido-mode t)
  '(fill-column 80)
  '(ggtags-oversize-limit 209715200)
  '(ggtags-sort-by-nearness t)
