@@ -57,7 +57,7 @@
      ("melpa-stable" . "http://stable.melpa.org/packages/")
      ("onpa" . "https://olanilsson.bitbucket.io/packages/")))
  '(package-selected-packages
-   '(scala-mode yaml-mode lua-mode org-tree-slide unfill graphviz-dot-mode dockerfile-mode groovy-mode vterm rust-mode kconfig-mode dts-mode meson-mode bitbake-modes ggtags magit use-package markdown-mode meson-mode))
+   '(whole-line-or-region scala-mode yaml-mode lua-mode org-tree-slide unfill graphviz-dot-mode dockerfile-mode groovy-mode vterm rust-mode kconfig-mode dts-mode meson-mode bitbake-modes ggtags magit use-package markdown-mode meson-mode))
  '(prog-mode-hook '(hl-line-mode display-line-numbers-mode))
  '(revert-without-query '(".*"))
  '(ring-bell-function 'ignore)
@@ -68,7 +68,8 @@
  '(sh-basic-offset 8)
  '(text-mode-hook '(hl-line-mode))
  '(tool-bar-mode nil)
- '(which-function-mode t))
+ '(which-function-mode t)
+ '(whole-line-or-region-global-mode t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
