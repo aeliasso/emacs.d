@@ -33,6 +33,7 @@
  '(glyphless-char-display-control '((format-control . acronym) (no-font . hex-code)))
  '(grep-files-aliases '(("everything" . "*")))
  '(help-window-select t)
+ '(ibuffer-mode-hook '(hl-line-mode))
  '(inhibit-startup-screen t)
  '(isearch-allow-scroll t)
  '(kill-do-not-save-duplicates t)
