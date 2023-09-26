@@ -22,6 +22,7 @@
  '(dired-mode-hook '(hl-line-mode))
  '(doc-view-scale-internally nil)
  '(ecb-options-version "2.40")
+ '(echo-keystrokes 0.5)
  '(extended-command-suggest-shorter nil)
  '(fido-mode t)
  '(fill-column 80)
