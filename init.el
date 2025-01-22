@@ -29,7 +29,6 @@
  '(ggtags-sort-by-nearness t)
  '(git-commit-summary-max-length 60)
  '(global-auto-revert-mode t)
- '(global-visual-line-mode t)
  '(glyphless-char-display-control '((format-control . acronym) (no-font . hex-code)))
  '(grep-files-aliases '(("everything" . "*")))
  '(help-window-select t)
@@ -67,8 +66,9 @@
  '(scroll-conservatively 10)
  '(sentence-end-double-space nil)
  '(sh-basic-offset 8)
- '(text-mode-hook '(hl-line-mode))
+ '(text-mode-hook '(hl-line-mode visual-line-mode))
  '(tool-bar-mode nil)
+ '(truncate-lines t)
  '(which-function-mode t)
  '(whole-line-or-region-global-mode t))
 (custom-set-faces
