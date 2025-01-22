@@ -13,6 +13,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(column-number-mode t)
+ '(compilation-mode-hook '(hl-line-mode))
  '(compilation-scroll-output 'first-error)
  '(create-lockfiles nil)
  '(cursor-type 'bar)
