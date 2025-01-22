@@ -23,6 +23,7 @@
 
 (add-to-list 'auto-mode-alist '("\\.zsh" . sh-mode))
 (add-to-list 'auto-mode-alist '("defconfig\\'" . kconfig-mode))
+(add-to-list 'auto-mode-alist '("\\.log\\'" . text-mode))
 
 (use-package markdown-mode
   :mode (("\\.markdown\\'" . gfm-mode)
