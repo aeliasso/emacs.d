@@ -44,17 +44,3 @@
 			 (string-match "power-test-vectors-artpec-8" buffer-file-name)))
 		(c-set-style "linux-tabs-only")
 	      (c-set-style "k&r-spaces-only"))))
-
-(add-hook 'c-mode-hook
-	  (lambda ()
-	    (c-add-style
-	     "axis"
-	     '("k&r-spaces-only"
-	       (c-basic-offset . 2)))))
-
-(add-hook 'c-mode-hook
-	  (lambda ()
-	    (c-add-style
-	     "tom"
-	     '("k&r-spaces-only"
-	       (c-basic-offset . 3)))))
