@@ -72,6 +72,8 @@
  '(tool-bar-mode nil)
  '(truncate-lines t)
  '(which-function-mode t)
+ '(whitespace-style
+   '(face trailing tabs lines newline missing-newline-at-eof empty indentation space-after-tab space-before-tab))
  '(whole-line-or-region-global-mode t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
