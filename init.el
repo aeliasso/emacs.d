@@ -51,13 +51,11 @@
    '(("melpa-stable" . 20)
      ("marmalade" . 20)
      ("gnu" . 10)
-     ("melpa" . 0)
-     ("onpa" . 5)))
+     ("melpa" . 0)))
  '(package-archives
    '(("gnu" . "http://elpa.gnu.org/packages/")
      ("melpa" . "http://melpa.org/packages/")
-     ("melpa-stable" . "http://stable.melpa.org/packages/")
-     ("onpa" . "https://olanilsson.bitbucket.io/packages/")))
+     ("melpa-stable" . "http://stable.melpa.org/packages/")))
  '(package-selected-packages
    '(magit seq whole-line-or-region scala-mode yaml-mode lua-mode org-tree-slide unfill graphviz-dot-mode dockerfile-mode groovy-mode vterm rust-mode kconfig-mode dts-mode meson-mode ggtags use-package markdown-mode meson-mode))
  '(prog-mode-hook '(hl-line-mode display-line-numbers-mode))
